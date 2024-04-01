@@ -1,7 +1,7 @@
 const getUrlParams = () => {
   const params = {};
   window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, (_, key, value) => {
-    params[key] = value;
+    params[key] = decodeURIComponent(value);
   });
 
   return params;
@@ -9,7 +9,7 @@ const getUrlParams = () => {
 
 const params = getUrlParams();
 document.getElementById('title').innerHTML =
-  params?.title?.replace('_', ' ') ?? '목표 달성일';
+  params?.title?.replaceAll('_', ' ') ?? '목표 달성일';
 
 const endDate = new Date(params.date?.split('-'));
 if (endDate) {

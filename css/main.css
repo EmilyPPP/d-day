@@ -23,17 +23,30 @@ body {
   background-size: 100%;
 }
 
+.dday{
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p{
+  margin: 0;
+}
 
 #title{
   font-size: 10vw;
   font-weight: bold;
-  margin-top: 20%;
   margin-bottom: 5%;
+  overflow: hidden;
+  text-overflow:ellipsis;
 }
 
 
 #count{
-  font-size: 25vw;
+  font-size: 20vw;
   font-weight: bolder;
   text-align: center;
   margin-top: 10px;
